@@ -1,0 +1,5 @@
+val transformer: Point => Point = (point: Point) => {
+val from = new NAD83(Map("zone" -> 403)).from()
+val p = point.transform(from)
+new Point(3.28084 * p.x, 3.28084 * p.y)
+}
