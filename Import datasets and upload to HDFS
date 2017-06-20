@@ -1,0 +1,7 @@
+%sh
+mkdir magellan
+wget https://www.dropbox.com/s/98yz5j6fc4qph3v/all.tsv -P magellan/ -nv
+wget https://www.dropbox.com/s/ttp3kyr9l8hzjdz/planning_neighborhoods.zip -P magellan/ -nv
+unzip magellan/planning_neighborhoods.zip -d magellan/
+hadoop fs -put magellan .
+hadoop fs -ls magellan
