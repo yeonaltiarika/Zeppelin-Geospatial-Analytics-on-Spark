@@ -1,0 +1,7 @@
+neighborhoods.
+join(uber).
+where($"point" within $"polygon").
+select($"tripId", $"timestamp", explode($"metadata").as(Seq("k", "v"))).
+withColumnRenamed("v", "neighborhood").
+drop("k").
+show(5)
