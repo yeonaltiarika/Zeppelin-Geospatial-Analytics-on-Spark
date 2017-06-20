@@ -1,0 +1,10 @@
+val uber = sc.textFile("magellan/all.tsv").map { line =>
+val parts = line.split("\t" )
+val tripId = parts(0)
+val timestamp = parts(1)
+val point = Point(parts(3).toDouble, parts(2).toDouble)
+UberRecord(tripId, timestamp, point)
+}.
+repartition(100).
+toDF().
+cache()
