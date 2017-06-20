@@ -1,0 +1,4 @@
+%dep
+z.addRepo("Spark Packages Repo").url("http://dl.bintray.com/spark-packages/maven")
+z.load("com.esri.geometry:esri-geometry-api:1.2.1")
+z.load("harsha2010:magellan:1.0.3-s_2.10")
