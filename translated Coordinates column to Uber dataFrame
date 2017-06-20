@@ -1,0 +1,3 @@
+val uberTransformed = uber.
+withColumn("nad83", $"point".transform(transformer)).
+cache()
